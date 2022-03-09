@@ -1,0 +1,51 @@
+<%- include("partials/header") %>
+
+<div class="welcome-msg">
+    <h1>Hello !</h1>
+    <h2>Please enter employee details.</h2>
+</div>
+
+<div class="jumbotron centered">
+    <div class="container">
+        <form action="/" method="POST">
+            <div class="form-group">
+                <label for="last_eval">Last Evaluation</label>
+                <input type="text" class="form-control" name="last_eval" placeholder="0 <= score <= 1" required>
+
+                <label for="num_projects">Number of Projects</label>
+                <input type="text" class="form-control" name="num_projects" required>
+
+                <label for="monthly_hrs">Average Monthly Hours</label>
+                <input type="text" class="form-control" name="monthly_hrs" placeholder="Hours" required>
+
+                <label for="time_spent">Time spent with Company</label>
+                <input type="text" class="form-control" name="time_spent" placeholder="Years in Company" required>
+
+                <label for="work_acc">Work Accident</label>
+                <input list="accident" class="form-control" name="work_acc" required>
+                <datalist id="accident">
+                    <option value="Yes">
+                    <option value="No">
+                </datalist>
+
+                <label for="promotion">Promotion in last 5 years</label>
+                <input list="promo" class="form-control" name="promotion" required>
+                <datalist id="promo">
+                    <option value="Yes">
+                    <option value="No">
+                </datalist>
+
+                <label for="salary">Salary</label>
+                <input list="sal" class="form-control" name="salary" required>
+                <datalist id="sal">
+                    <option value="low">
+                    <option value="medium">
+                    <option value="high">
+                </datalist>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-dark">Register</button>
+            </div>
+        </form>
+    </div>
+</div>

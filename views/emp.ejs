@@ -1,0 +1,33 @@
+<%- include("partials/header") %>
+
+<div class="welcome-msg">
+    <h1>RESULTS</h1>
+</div>
+<div class="container">
+    <div class="row results-row">
+
+        <div class=" col-lg-6 satisfaction-column">
+            <div class="card ">
+
+                <div class="card-body">
+                    <p class="card-text">The satisfaction index is</p>
+                </div>
+                <span class="badge badge-dark" style="font-size: xx-large;"><%= satisfaction *100 %></span>
+            </div>
+        </div>
+
+        <div class=" col-lg-6 churn-column">
+            <div class="card ">
+                <div class="card-body">
+                    <p class="card-text">The churn outcome is</p>
+                </div>
+                <% if( churn === "STAY"){ %>
+                <span class="badge badge-success" style="font-size: xx-large;"><%= churn %></span>
+                <% } else { %>
+                <span class=" badge badge-danger" style="font-size: xx-large;"><%= churn %></span>
+                <% } %>
+
+            </div>
+        </div>
+    </div>
+</div>
